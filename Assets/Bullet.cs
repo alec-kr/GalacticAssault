@@ -10,6 +10,24 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * velocity;           
+        rb.velocity = transform.up * velocity;    
+    }
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        if (col.name.StartsWith("EnemyShip")) {
+            col.gameObject.GetComponent<EnemyShip>().death();
+            Debug.Log("Collision with ship");
+            Destroy(gameObject);
+        }
+
+    }
+
+    private void OnBecameInvisible()
+    {
+        if (gameObject != null)
+        {    
+            // Do something  
+            Destroy(gameObject);
+        }
     }
 }
