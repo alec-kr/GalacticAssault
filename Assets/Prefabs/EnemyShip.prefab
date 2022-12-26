@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7200207453574466174}
   - component: {fileID: 7200207453574466175}
   - component: {fileID: 7200207453574466171}
+  - component: {fileID: -3927671554780201985}
+  - component: {fileID: -1363644119412950458}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Untagged
@@ -76,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Color: {r: 1, g: 0.20461828, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,7 +105,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.28866667}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -146,3 +148,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32450522d2c38034ab92195536e1837f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3927671554780201985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200207453574466160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63f2c82270cc927fa1b0a3c30192919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1363644119412950458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200207453574466160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd73d2e269853b75a78ef37929e6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4614655158595789248, guid: ccb2f71a22f3d76f499ec1ec5a48ae8c, type: 3}
+  enemyLocation: {fileID: 7200207453574466172}
