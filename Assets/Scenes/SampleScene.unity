@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 700390638}
   - component: {fileID: 700390637}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: RocketThruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5206,6 +5206,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 405804537559012150, guid: fd4984593c67db780aad30925d301715, type: 3}
+      propertyPath: rocketThruster
+      value: 
+      objectReference: {fileID: 700390638}
     - target: {fileID: 405804537559012151, guid: fd4984593c67db780aad30925d301715, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -6,6 +6,7 @@ public class MovePlayer : MonoBehaviour
 {
     public float speed = 5.0f;
     public float rotationSpeed = 500.0f;
+    public ParticleSystem rocketThruster;
 
     // Update is called once per frame
     void Update() {
@@ -21,6 +22,11 @@ public class MovePlayer : MonoBehaviour
         if (movementDirection != Vector2.zero) {
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+
+            rocketThruster.Play();
         }
+
+        else
+            rocketThruster.Stop();
     }
 }
