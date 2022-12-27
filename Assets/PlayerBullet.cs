@@ -15,7 +15,8 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.name.StartsWith("EnemyShip")) {
-            col.gameObject.GetComponent<EnemyShip>().death();
+            col.gameObject.GetComponent<EnemyShip>().takeDamage();
+            // col.gameObject.GetComponent<EnemyShip>().death();
             Debug.Log("Collision with ship");
             Destroy(gameObject);
         }
