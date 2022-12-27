@@ -15,8 +15,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.name == "PlayerShip") {
-            // col.gameObject.GetComponent<PlayerShip>().death();
-            Debug.Log("Player HIT!!!");
+            col.gameObject.GetComponent<PlayerShip>().takeDamage();
             Destroy(gameObject);
         }
 
