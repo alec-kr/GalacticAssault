@@ -14,7 +14,7 @@ public class PlayerShip : MonoBehaviour
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             // Destroy the gameObject
-            Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
 
@@ -22,8 +22,8 @@ public class PlayerShip : MonoBehaviour
         if (gameObject != null) {
             if (lives > 1) 
                 lives -= 1;
-            else
-                death();
+            // else
+                // death();
         }
     }
 }
