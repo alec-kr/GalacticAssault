@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyShip : MonoBehaviour
 {
+    public ParticleSystem explosionPrefab;
     public int lives = 3;
     // This function will be called when a bullet hits the ship
     public void death() {
         // Check if the gameObject still exists
         if (gameObject != null) {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
             // Destroy the gameObject
             Destroy(gameObject);
         }
