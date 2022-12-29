@@ -4,29 +4,37 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float rotationSpeed = 500.0f;
     public ParticleSystem rocketThruster;
+    private float thrustSpeed = 6.0f;
+    private float turnSpeed = 1.5f;
+    private Rigidbody2D _rigidbody;
+    private bool _thrusting;
+    private float _turnDirection;
+    private void Awake() {
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
 
-    // Update is called once per frame
-    void Update() {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+    private void Update() {
+        _thrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        Debug.Log(_thrusting);
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            _turnDirection = 1.0f;
 
-        Vector2 movementDirection = new Vector2(horizontalInput, verticalInput);
-        float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
-        movementDirection.Normalize();
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            _turnDirection = -1.0f;
+        else
+            _turnDirection = 0.0f;
+    }
 
-        transform.Translate(movementDirection * speed * inputMagnitude * Time.deltaTime, Space.World);
-
-        if (movementDirection != Vector2.zero) {
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-
+    private void FixedUpdate() {
+        if(_thrusting) {
+            _rigidbody.AddForce(this.transform.up * this.thrustSpeed);
             rocketThruster.Play();
         }
-
         else
             rocketThruster.Stop();
+
+        if(_turnDirection != 0.0f)
+            _rigidbody.AddTorque(_turnDirection * this.turnSpeed);
     }
 }
