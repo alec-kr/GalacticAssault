@@ -13,16 +13,16 @@ public class EnemyShip : MonoBehaviour
         if (gameObject != null) {
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
-            // Destroy the gameObject
             Destroy(gameObject);
         }
     }
 
     public void takeDamage() {
         if (gameObject != null) {
-            hitEffect.Play();
-            if (lives > 1)
+            if (lives > 1) {
+                hitEffect.Play();
                 lives -= 1;
+            }
             else
                 death();
         }

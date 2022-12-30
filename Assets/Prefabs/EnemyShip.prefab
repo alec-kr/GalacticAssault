@@ -4938,6 +4938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 678518897653109321, guid: 3fe8d72517c5e98d0b449526609cc222, type: 3}
+  deathEffect: {fileID: 5654917080814802816, guid: 18d616380da9f791f960c322d672eea7, type: 3}
   hitEffect: {fileID: 5897124744574159878}
   lives: 3
 --- !u!114 &2096204154657793156
