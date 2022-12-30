@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShip : MonoBehaviour
 {
     public ParticleSystem explosionPrefab;
+    [SerializeField] private AudioSource hitEffect;
     public int lives = 3;
     // Start is called before the first frame update
 
@@ -20,6 +21,7 @@ public class PlayerShip : MonoBehaviour
 
     public void takeDamage() {
         if (gameObject != null) {
+            hitEffect.Play();
             if (lives > 1) 
                 lives -= 1;
             // else
