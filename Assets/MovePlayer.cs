@@ -16,7 +16,7 @@ public class MovePlayer : MonoBehaviour
 
     private void Update() {
         _thrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
-        Debug.Log(_thrusting);
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             _turnDirection = 1.0f;
 
