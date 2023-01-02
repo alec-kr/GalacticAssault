@@ -6,6 +6,7 @@ public class Cannon : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform playerLocation;
+    [SerializeField] private AudioSource shootEffect;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,7 @@ public class Cannon : MonoBehaviour
     void Shoot() {
         // Spawn bullets
         Instantiate(bulletPrefab, playerLocation.position, playerLocation.rotation);
+        shootEffect.Play();  
     }
 
 }
