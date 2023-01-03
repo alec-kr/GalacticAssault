@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class PlayerShip : MonoBehaviour
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             // Destroy the gameObject
-            // Destroy(gameObject);
+            Destroy(gameObject);
+            // SceneManager.LoadScene("GameOverScene");
         }
     }
 
@@ -24,8 +26,8 @@ public class PlayerShip : MonoBehaviour
             hitEffect.Play();
             if (lives > 1) 
                 lives -= 1;
-            // else
-                // death();
+            else
+                death();
         }
     }
 }
