@@ -10,7 +10,8 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * velocity;    
+        rb.velocity = transform.up * velocity;
+        Destroy(gameObject, 1.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
@@ -19,14 +20,5 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
-
-    private void OnBecameInvisible()
-    {
-        if (gameObject != null)
-        {    
-            // Do something  
-            Destroy(gameObject);
-        }
     }
 }

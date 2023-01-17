@@ -42,7 +42,7 @@ InputManager:
     descriptiveName: Fire the cannnon
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: z
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 0

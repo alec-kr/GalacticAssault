@@ -10,17 +10,19 @@ public class MovePlayer : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private bool _thrusting;
     private float _turnDirection;
+    Vector3 currentPos;
+
     private void Awake() {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update() {
-        _thrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        _thrusting = Input.GetKey(KeyCode.UpArrow);
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
             _turnDirection = 1.0f;
 
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
             _turnDirection = -1.0f;
         else
             _turnDirection = 0.0f;
