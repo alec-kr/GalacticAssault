@@ -27,15 +27,4 @@ public class EnemyShip : MonoBehaviour
                 death();
         }
     }
-
-    // If the ship leaves the screen, destroy the object
-    private void OnBecameInvisible()
-    {
-        // Check if the gameObject exists
-        if (gameObject != null)
-        {    
-            // Destroy the gameObject
-            Destroy(gameObject);
-        }
-    }
 }

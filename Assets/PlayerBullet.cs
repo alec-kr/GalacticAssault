@@ -6,26 +6,16 @@ public class PlayerBullet : MonoBehaviour
 {
     public float velocity = 20f;
     public Rigidbody2D rb;
-
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.up * velocity;    
+        rb.velocity = transform.up * velocity;
+        Destroy(gameObject, 1.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.name.StartsWith("EnemyShip")) {
             col.gameObject.GetComponent<EnemyShip>().takeDamage();
-            Destroy(gameObject);
-        }
-
-    }
-
-    private void OnBecameInvisible()
-    {
-        if (gameObject != null)
-        {    
-            // Do something  
             Destroy(gameObject);
         }
     }
