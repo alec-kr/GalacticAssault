@@ -25,6 +25,8 @@ public class EnemyShip : MonoBehaviour
             }
             else
                 death();
+            
+            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(2);
         }
     }
 }
