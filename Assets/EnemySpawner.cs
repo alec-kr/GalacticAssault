@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefabs;
     public GameObject[] spawnPoints;
     private GameObject player;
 
@@ -20,6 +20,10 @@ public class EnemySpawner : MonoBehaviour
             return;
 
         int randomSpawnPoint = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemyPrefab, spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
+        int randomEnemy = Random.Range(0, enemyPrefabs.Length);
+
+        Debug.Log("Enemy type: "+randomEnemy+" spawned");
+
+        Instantiate(enemyPrefabs[randomEnemy], spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
     }
 }

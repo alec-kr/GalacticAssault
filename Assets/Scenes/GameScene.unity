@@ -516,6 +516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8149664368888818698, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: lives
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 8149664368888818743, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -568,7 +572,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7878587300372405315, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
 --- !u!1 &861294085
 GameObject:
@@ -774,7 +779,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98efdb7da957d70da80291510fd7408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4000722120988759307, guid: baef56109907547b88e73ac381c1cb2d, type: 3}
+  enemyPrefabs:
+  - {fileID: 4000722120988759307, guid: baef56109907547b88e73ac381c1cb2d, type: 3}
+  - {fileID: 6069152652653531974, guid: 5a0d15553cac2e6a1a39ec986e8eb125, type: 3}
+  - {fileID: 8126499256094251544, guid: 45a81520af72e63cc8502c8eab63f7b8, type: 3}
+  - {fileID: 7646376266642524376, guid: b44ad5f57bce140f8a77aeff174992be, type: 3}
   spawnPoints:
   - {fileID: 1275624596}
   - {fileID: 590611581}
