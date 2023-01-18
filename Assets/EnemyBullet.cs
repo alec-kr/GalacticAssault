@@ -19,6 +19,5 @@ public class EnemyBullet : MonoBehaviour
             col.gameObject.GetComponent<PlayerShip>().takeDamage();
             Destroy(gameObject);
         }
-
     }
 }
