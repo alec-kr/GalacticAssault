@@ -17,7 +17,6 @@ public class PlayerShip : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             // Destroy the gameObject
             Destroy(gameObject);
-            // SceneManager.LoadScene("GameOverScene");
         }
     }
 

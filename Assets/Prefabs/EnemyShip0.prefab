@@ -4829,7 +4829,7 @@ GameObject:
   - component: {fileID: 5897124744574159878}
   - component: {fileID: 147822694976355872}
   m_Layer: 0
-  m_Name: EnemyShip
+  m_Name: EnemyShip0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5147,7 +5147,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b103f9d4e304eeb4291787b9d002dc35, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5260,7 +5260,7 @@ GameObject:
   - component: {fileID: 1929147050476709566}
   - component: {fileID: 7991810538475687195}
   m_Layer: 0
-  m_Name: EnemyWeaponL (1)
+  m_Name: EnemyWeaponR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
