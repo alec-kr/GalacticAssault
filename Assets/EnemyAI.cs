@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    private GameObject player;
+    private Transform player;
     private Vector3 playerPos;
+    private Vector3 enemyPos;
     private float speed;
-    public Vector3 pos;
+    private float dist;
+    private int closeThreshold = 5;
+    private Rigidbody2D _rigidbody;
 
     // Start is called before the first frame update
     private void Start()
     {
-        player = GameObject.Find("PlayerShip");
-        speed = Random.Range(3.0f, 5.0f);
+        player = GameObject.Find("PlayerShip").transform;
+        speed = Random.Range(1.0f, 3.0f);
     }
 
     // Update is called once per frame
@@ -23,11 +26,26 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        playerPos = player.transform.position;        
+        _rigidbody = GetComponent<Rigidbody2D>();
 
-        transform.position = Vector2.MoveTowards(this.transform.position, playerPos, speed * Time.deltaTime);
-        Vector2 direction = playerPos - transform.position;
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
+        playerPos = player.position; 
+        enemyPos = transform.position;
+        dist = Vector3.Distance(playerPos, enemyPos);
+
+        if(dist >= closeThreshold) {
+            _rigidbody.AddForce(this.transform.up * this.speed);
+        }
+
+        else {
+            _rigidbody.AddForce(this.transform.up * -this.speed);
+        }
+
+        Vector2 direction = playerPos - enemyPos;
+        transform.rotation = Quaternion.RotateTowards(
+                                 transform.rotation,
+                                 Quaternion.FromToRotation(Vector2.up, direction),
+                                 100.0f * Time.deltaTime
+                             );
     }
 
 }

@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 8167686448367122245}
   - component: {fileID: 6115284033331552507}
   - component: {fileID: 1962653242211672954}
+  - component: {fileID: 518172130748725887}
   m_Layer: 0
   m_Name: EnemyShip2
   m_TagString: Untagged
@@ -391,7 +392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f2c82270cc927fa1b0a3c30192919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {x: 0, y: 0, z: 0}
 --- !u!114 &-3568671790646815839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,3 +553,24 @@ PolygonCollider2D:
       - {x: -0.84375, y: -0.75}
       - {x: -0.59375, y: -0.9375}
       - {x: 0.84375, y: -0.9375}
+--- !u!50 &518172130748725887
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126499256094251544}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
