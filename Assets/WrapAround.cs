@@ -5,8 +5,8 @@ using UnityEngine;
 public class WrapAround : MonoBehaviour
 {
     private bool isVisible = true;
-    private bool isWrappingX = false;
-    private bool isWrappingY = false;
+    private bool isWrappingX = true;
+    private bool isWrappingY = true;
     Vector3 newPosition;
 
     private void FixedUpdate() {
@@ -24,12 +24,12 @@ public class WrapAround : MonoBehaviour
             return;
         }
 
-        if(newPosition.x > 1 || newPosition.x < 0) {
+        if(!isWrappingX && (newPosition.x > 1 || newPosition.x < 0)) {
             newPosition.x = -newPosition.x;
             isWrappingX = true;
         }
 
-        if(newPosition.y > 1 || newPosition.y < 0) {
+        if(!isWrappingY && (newPosition.y > 1 || newPosition.y < 0)) {
             newPosition.y = -newPosition.y;
             isWrappingY = true;
         }
