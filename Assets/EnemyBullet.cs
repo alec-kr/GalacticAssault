@@ -11,7 +11,6 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.up * velocity;
-        Destroy(gameObject, 1.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
