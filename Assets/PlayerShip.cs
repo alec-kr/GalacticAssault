@@ -8,7 +8,7 @@ public class PlayerShip : MonoBehaviour
     public ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
     public int lives = 3;
-    // Start is called before the first frame update
+    public GameObject textPrefab;
 
     public void death() {
         // Check if the gameObject still exists
@@ -27,6 +27,8 @@ public class PlayerShip : MonoBehaviour
                 lives -= 1;
             else
                 death();
+            
+            Instantiate(textPrefab, transform.position, Quaternion.identity);
         }
     }
 }
