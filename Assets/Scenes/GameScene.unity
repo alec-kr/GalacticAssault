@@ -612,6 +612,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 24374032547705921, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: textPrefab
+      value: 
+      objectReference: {fileID: 6652842024759301270, guid: c61d8b7e0f43ed2e9a599d4fd8620c70, type: 3}
+    - target: {fileID: 6478672132218328059, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: textPrefab
+      value: 
+      objectReference: {fileID: 6652842024759301270, guid: c61d8b7e0f43ed2e9a599d4fd8620c70, type: 3}
     - target: {fileID: 8149664368888818698, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
       propertyPath: lives
       value: 33

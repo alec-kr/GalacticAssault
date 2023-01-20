@@ -406,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 678518897653109321, guid: 3fe8d72517c5e98d0b449526609cc222, type: 3}
   hitEffect: {fileID: 8167686448367122245}
+  textPrefab: {fileID: 6652842024759301270, guid: c61d8b7e0f43ed2e9a599d4fd8620c70, type: 3}
   lives: 3
 --- !u!82 &8167686448367122245
 AudioSource:
