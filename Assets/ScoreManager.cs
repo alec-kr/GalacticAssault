@@ -7,14 +7,18 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     private TMP_Text scoreText;
-    private int scoreVal = 0;
+    private int scoreVal;
+
+    private void Start() {
+        scoreVal = 0;
+        scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
+    }
 
     public void AddScore(int amountToAdd) {
         scoreVal += amountToAdd;
     }
 
     private void FixedUpdate() {
-        scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
         scoreText.text = $"Score: {scoreVal}";
     }
 }

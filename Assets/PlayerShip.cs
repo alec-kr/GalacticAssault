@@ -7,11 +7,12 @@ public class PlayerShip : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
-    private int health = 100;
+    private int health;
     [SerializeField] private GameObject textPrefab;
     private HealthManager healthMgr;
 
     private void Start() {
+        health = 100;
         healthMgr = GameObject.Find("GameHUD").GetComponent<HealthManager>();
     }
 
