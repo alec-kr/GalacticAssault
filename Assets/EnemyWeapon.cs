@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] private AudioSource shootEffect;
-    public GameObject bulletPrefab;
-    public GameObject flasher;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject flasher;
     // Start is called before the first frame update
     void Start()
     {

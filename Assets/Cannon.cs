@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public GameObject flasher;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject flasher;
     [SerializeField] private AudioSource shootEffect;
 
     // Update is called once per frame
