@@ -31,8 +31,11 @@ public class PlayerShip : MonoBehaviour
 
             hitEffect.Play();
 
-            if (health > randDamage) 
+            if (health > randDamage) {
                 health -= randDamage;
+                GameObject.Find("GameHUD").GetComponent<HealthManager>().reduceHealth(randDamage);
+            }
+
             else
                 death();
         }

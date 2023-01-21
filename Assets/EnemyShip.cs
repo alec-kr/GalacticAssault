@@ -36,7 +36,7 @@ public class EnemyShip : MonoBehaviour
                 death();
             }
 
-            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(randScore);
+            GameObject.Find("GameHUD").GetComponent<ScoreManager>().AddScore(randScore);
         }
     }
 }
