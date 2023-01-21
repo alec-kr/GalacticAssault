@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootEffect: {fileID: 2513741196940139829}
   bulletPrefab: {fileID: 6294044928601012633, guid: a098520ef374dce67b836804bcb339a0, type: 3}
+  flasher: {fileID: 58901937960661853, guid: 22b17922d19040284a393090ad231608, type: 3}
   enemyLocation: {fileID: 7693506765435181058}
 --- !u!1 &3156416855182328414
 GameObject:
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootEffect: {fileID: 2959687981372079047}
   bulletPrefab: {fileID: 6294044928601012633, guid: a098520ef374dce67b836804bcb339a0, type: 3}
+  flasher: {fileID: 58901937960661853, guid: 22b17922d19040284a393090ad231608, type: 3}
   enemyLocation: {fileID: 3585026929119033330}
 --- !u!1 &8126499256094251544
 GameObject:

@@ -6,7 +6,7 @@ public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] private AudioSource shootEffect;
     public GameObject bulletPrefab;
-    public Transform enemyLocation;
+    public GameObject flasher;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,9 @@ public class EnemyWeapon : MonoBehaviour
 
     void Shoot() {
         // Spawn bullets
-        Instantiate(bulletPrefab, enemyLocation.position, enemyLocation.rotation);
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject orangeFlasher = Instantiate(flasher, transform.position, transform.rotation) as GameObject;
+        orangeFlasher.transform.parent = gameObject.transform;
         shootEffect.Play();
     }
 }

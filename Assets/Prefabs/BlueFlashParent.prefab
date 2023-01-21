@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 4329474489432076231}
   - component: {fileID: 9036814175006897223}
   m_Layer: 0
-  m_Name: FlashParent
+  m_Name: BlueFlashParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
