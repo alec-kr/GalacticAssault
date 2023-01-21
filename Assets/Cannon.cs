@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cannon : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform playerLocation;
+    public GameObject flasher;
     [SerializeField] private AudioSource shootEffect;
 
     // Update is called once per frame
@@ -18,9 +18,10 @@ public class Cannon : MonoBehaviour
 
     void Shoot() {
         // Spawn bullets
-        Instantiate(bulletPrefab, playerLocation.position, playerLocation.rotation);
-        
-        shootEffect.Play();  
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        GameObject blueFlasher = Instantiate(flasher, transform.position, transform.rotation) as GameObject;
+        blueFlasher.transform.parent = gameObject.transform;
+        shootEffect.Play();
     }
 
 }

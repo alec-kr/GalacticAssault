@@ -613,9 +613,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 24374032547705921, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: flasher
+      value: 
+      objectReference: {fileID: 9180394278380389135, guid: 5d3f9f12b5ed629b096cf61a3c0e9f60, type: 3}
+    - target: {fileID: 24374032547705921, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
       propertyPath: textPrefab
       value: 
       objectReference: {fileID: 6652842024759301270, guid: c61d8b7e0f43ed2e9a599d4fd8620c70, type: 3}
+    - target: {fileID: 3848256646163397598, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.215
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5891788438713066945, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478672132218328059, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
+      propertyPath: flasher
+      value: 
+      objectReference: {fileID: 9180394278380389135, guid: 5d3f9f12b5ed629b096cf61a3c0e9f60, type: 3}
     - target: {fileID: 6478672132218328059, guid: 8cae9034b709ff2f1a609b4d4ed6b54b, type: 3}
       propertyPath: textPrefab
       value: 
