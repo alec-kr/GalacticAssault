@@ -9,6 +9,12 @@ public class PlayerShip : MonoBehaviour
     [SerializeField] private AudioSource hitEffect;
     private int health = 100;
     [SerializeField] private GameObject textPrefab;
+    private HealthManager healthMgr;
+
+    private void Start() {
+        healthMgr = GameObject.Find("GameHUD").GetComponent<HealthManager>();
+    }
+
 
     private void death() {
         // Check if the gameObject still exists
@@ -33,7 +39,7 @@ public class PlayerShip : MonoBehaviour
 
             if (health > randDamage) {
                 health -= randDamage;
-                GameObject.Find("GameHUD").GetComponent<HealthManager>().reduceHealth(randDamage);
+                healthMgr.reduceHealth(randDamage);
             }
 
             else
