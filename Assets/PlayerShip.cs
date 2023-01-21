@@ -27,8 +27,12 @@ public class PlayerShip : MonoBehaviour
                 lives -= 1;
             else
                 death();
-            
-            Instantiate(textPrefab, transform.position, Quaternion.identity);
+
+            // Move this above if statement
+            int randDamage = Random.Range(1, 11);
+
+            GameObject damageParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
+            damageParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"-{randDamage}";
         }
     }
 }

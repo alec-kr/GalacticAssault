@@ -27,6 +27,7 @@ public class EnemyShip : MonoBehaviour
             else
                 death();
             
+            // Move this above if statement
             int randScore = Random.Range(1, 11);
 
             GameObject scoreParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
