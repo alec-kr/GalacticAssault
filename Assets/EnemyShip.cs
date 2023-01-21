@@ -27,8 +27,13 @@ public class EnemyShip : MonoBehaviour
             else
                 death();
             
-            Instantiate(textPrefab, transform.position, Quaternion.identity);
-            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(2);
+            int randScore = Random.Range(1, 11);
+
+            GameObject scoreParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
+            scoreParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"+{randScore}";
+
+
+            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(randScore);
         }
     }
 }
