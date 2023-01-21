@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EnemyShip : MonoBehaviour
 {
-    public ParticleSystem explosionPrefab;
+    [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
-    public GameObject textPrefab;
-    public int lives = 3;
+    [SerializeField] private GameObject textPrefab;
+    private int health = 30;
     // This function will be called when a bullet hits the ship
-    public void death() {
+    private void death() {
         // Check if the gameObject still exists
         if (gameObject != null) {
+            health = 0;
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
@@ -19,16 +20,23 @@ public class EnemyShip : MonoBehaviour
     }
 
     public void takeDamage() {
+        int randScore = Random.Range(1, 11);
+
         if (gameObject != null) {
-            if (lives > 1) {
+            GameObject scoreParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
+            scoreParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"+{randScore}";
+
+            if (health > randScore) {
                 hitEffect.Play();
-                lives -= 1;
+                health -= randScore;
             }
-            else
+
+            else {
+                randScore = health;
                 death();
-            
-            Instantiate(textPrefab, transform.position, Quaternion.identity);
-            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(2);
+            }
+
+            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(randScore);
         }
     }
 }

@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
-    public ParticleSystem explosionPrefab;
+    [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
-    public int lives = 3;
-    public GameObject textPrefab;
+    private int health = 100;
+    [SerializeField] private GameObject textPrefab;
 
-    public void death() {
+    private void death() {
         // Check if the gameObject still exists
         if (gameObject != null) {
+            health = 0;
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             // Destroy the gameObject
@@ -21,14 +22,20 @@ public class PlayerShip : MonoBehaviour
     }
 
     public void takeDamage() {
+        int randDamage = Random.Range(1, 11);
+        
         if (gameObject != null) {
+
+            GameObject damageParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
+            damageParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"-{randDamage}";
+
             hitEffect.Play();
-            if (lives > 1) 
-                lives -= 1;
+
+            if (health > randDamage) 
+                health -= randDamage;
             else
                 death();
-            
-            Instantiate(textPrefab, transform.position, Quaternion.identity);
         }
+
     }
 }
