@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float velocity = 20f;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public GameObject hitEffect;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * velocity;
     }
 
