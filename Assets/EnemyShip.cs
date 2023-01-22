@@ -7,7 +7,14 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
     [SerializeField] private GameObject textPrefab;
+    private ScoreManager scoreMgr;
     private int health = 30;
+
+    private void Start() {
+        scoreMgr = GameObject.Find("GameHUD").GetComponent<ScoreManager>();
+    }
+
+
     // This function will be called when a bullet hits the ship
     private void death() {
         // Check if the gameObject still exists
@@ -36,7 +43,7 @@ public class EnemyShip : MonoBehaviour
                 death();
             }
 
-            GameObject.Find("ScoreManager").GetComponent<ScoreManager>().AddScore(randScore);
+            scoreMgr.AddScore(randScore);
         }
     }
 }
