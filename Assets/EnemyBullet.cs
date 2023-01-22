@@ -6,6 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public float velocity = 20f;
     public Rigidbody2D rb;
+    public GameObject hitEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.name == "PlayerShip") {
+            Instantiate(hitEffect, this.transform.position, this.transform.rotation);
             col.gameObject.GetComponent<PlayerShip>().takeDamage();
             Destroy(gameObject);
         }

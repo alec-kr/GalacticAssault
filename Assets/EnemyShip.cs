@@ -7,6 +7,7 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
     [SerializeField] private GameObject textPrefab;
+    public GameObject explosionAnim;
     private ScoreManager scoreMgr;
     private int health = 30;
 
@@ -22,6 +23,7 @@ public class EnemyShip : MonoBehaviour
             health = 0;
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
+            Instantiate(explosionAnim, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
