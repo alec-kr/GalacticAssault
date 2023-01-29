@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootEffect: {fileID: 2513741196940139829}
   bulletPrefab: {fileID: 8375274664796727069, guid: 9aedf2797dfeaa58cb0d93c7b21a9bdd, type: 3}
-  flasher: {fileID: 58901937960661853, guid: 22b17922d19040284a393090ad231608, type: 3}
+  flasher: {fileID: 1215237875684523308, guid: 3e2eecd3fdc1d850b86d3ac970e204e7, type: 3}
 --- !u!1 &3156416855182328414
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootEffect: {fileID: 2959687981372079047}
   bulletPrefab: {fileID: 8375274664796727069, guid: 9aedf2797dfeaa58cb0d93c7b21a9bdd, type: 3}
-  flasher: {fileID: 58901937960661853, guid: 22b17922d19040284a393090ad231608, type: 3}
+  flasher: {fileID: 1215237875684523308, guid: 3e2eecd3fdc1d850b86d3ac970e204e7, type: 3}
 --- !u!1 &8126499256094251544
 GameObject:
   m_ObjectHideFlags: 0
