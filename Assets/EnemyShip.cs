@@ -27,9 +27,7 @@ public class EnemyShip : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Instantiate(explosionAnim, transform.position, Quaternion.identity);
 
-            int spawn = Random.Range(1, 4);
-            Debug.Log(spawn);
-            if(spawn == 3) {
+            if(Random.Range(1, 4) == 3) {
                 SpawnHealth();
             }
 
