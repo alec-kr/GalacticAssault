@@ -1139,8 +1139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a77ecd9a13aa0f3a13abc7ee79f9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 626372169049417426, guid: b422d8ebc809ba6b5aecb0a9a9476eab, type: 3}
-  spawnHealthAnim: {fileID: 7591887938711578257, guid: e0d2cf9d16a60ed33abef54f4c3e8131, type: 3}
 --- !u!4 &1452835905
 Transform:
   m_ObjectHideFlags: 0
@@ -1735,11 +1733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8081163339118537613, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
       propertyPath: m_LinearDrag
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8081163339118537613, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
       propertyPath: m_AngularDrag
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
