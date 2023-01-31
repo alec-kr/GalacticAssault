@@ -7,6 +7,8 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
     [SerializeField] private GameObject textPrefab;
+    [SerializeField] private GameObject heartPrefab;
+    [SerializeField] private GameObject spawnHealthAnim;
     public GameObject explosionAnim;
     private ScoreManager scoreMgr;
     private int health = 30;
@@ -24,6 +26,13 @@ public class EnemyShip : MonoBehaviour
             // Start the explosion effect
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Instantiate(explosionAnim, transform.position, Quaternion.identity);
+
+            int spawn = Random.Range(1, 4);
+            Debug.Log(spawn);
+            if(spawn == 3) {
+                SpawnHealth();
+            }
+
             Destroy(gameObject);
         }
     }
@@ -48,4 +57,9 @@ public class EnemyShip : MonoBehaviour
             scoreMgr.AddScore(randScore);
         }
     }
+
+    private void SpawnHealth() {
+        Instantiate(spawnHealthAnim, transform.position, transform.rotation);
+        Instantiate(heartPrefab, transform.position, transform.rotation);
+     }
 }
