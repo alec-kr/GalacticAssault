@@ -31,15 +31,13 @@ public class PlayerShip : MonoBehaviour
         int randDamage = Random.Range(1, 11);
         
         if (gameObject != null) {
-
             GameObject damageParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
             damageParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"-{randDamage}";
 
             hitEffect.Play();
 
-            if (healthMgr.GetHealth() > randDamage) {
+            if (healthMgr.GetHealth() > randDamage)
                 healthMgr.ReduceHealth(randDamage);
-            }
 
             else
                 death();
