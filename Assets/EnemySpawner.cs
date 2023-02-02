@@ -22,8 +22,6 @@ public class EnemySpawner : MonoBehaviour
         int randomSpawnPoint = Random.Range(0, spawnPoints.Length);
         int randomEnemy = Random.Range(0, enemyPrefabs.Length);
 
-        Debug.Log("Enemy type: "+randomEnemy+" spawned");
-
         Instantiate(enemyPrefabs[randomEnemy], spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
     }
 }

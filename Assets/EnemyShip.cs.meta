@@ -7,8 +7,8 @@ MonoImporter:
   - explosionPrefab: {instanceID: 0}
   - hitEffect: {instanceID: 0}
   - textPrefab: {instanceID: 0}
-  - heartPrefab: {fileID: 626372169049417426, guid: b422d8ebc809ba6b5aecb0a9a9476eab, type: 3}
-  - spawnHealthAnim: {fileID: 7591887938711578257, guid: e0d2cf9d16a60ed33abef54f4c3e8131, type: 3}
+  - heartPrefab: {instanceID: 0}
+  - spawnHealthAnim: {instanceID: 0}
   - explosionAnim: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

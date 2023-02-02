@@ -9,14 +9,13 @@ public class EnemyShip : MonoBehaviour
     [SerializeField] private GameObject textPrefab;
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private GameObject spawnHealthAnim;
-    public GameObject explosionAnim;
     private ScoreManager scoreMgr;
     private int health = 30;
+    public GameObject explosionAnim;
 
     private void Start() {
         scoreMgr = GameObject.Find("GameHUD").GetComponent<ScoreManager>();
     }
-
 
     // This function will be called when a bullet hits the ship
     private void death() {
@@ -27,9 +26,8 @@ public class EnemyShip : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             Instantiate(explosionAnim, transform.position, Quaternion.identity);
 
-            if(Random.Range(1, 4) == 3) {
+            if(Random.Range(1, 4) == 3)
                 SpawnHealth();
-            }
 
             Destroy(gameObject);
         }

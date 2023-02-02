@@ -9,8 +9,8 @@ public class EnemyAI : MonoBehaviour
     private Vector3 enemyPos;
     private float speed;
     private float dist;
-    private int closeThreshold = 5;
     private Rigidbody2D _rigidbody;
+    private int closeThreshold = 5;
 
     // Start is called before the first frame update
     private void Start()
@@ -22,9 +22,8 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(player == null) {
+        if(player == null)
             return;
-        }
 
         _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -32,13 +31,11 @@ public class EnemyAI : MonoBehaviour
         enemyPos = transform.position;
         dist = Vector3.Distance(playerPos, enemyPos);
 
-        if(dist >= closeThreshold) {
+        if(dist >= closeThreshold)
             _rigidbody.AddForce(this.transform.up * this.speed);
-        }
 
-        else {
+        else
             _rigidbody.AddForce(this.transform.up * -this.speed);
-        }
 
         Vector2 direction = playerPos - enemyPos;
         transform.rotation = Quaternion.RotateTowards(
