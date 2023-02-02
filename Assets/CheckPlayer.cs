@@ -9,7 +9,7 @@ public class CheckPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("PlayerShip");        
+        player = GameObject.Find("PlayerShip");
     }
 
     // Update is called once per frame

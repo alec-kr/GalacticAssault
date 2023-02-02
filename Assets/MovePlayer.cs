@@ -6,7 +6,7 @@ public class MovePlayer : MonoBehaviour
 {
     public ParticleSystem rocketThruster;
     private float thrustSpeed = 6.0f;
-    private float turnSpeed = 1.5f;
+    private float turnSpeed = 15.0f;
     private Rigidbody2D _rigidbody;
     private bool _thrusting;
     private float _turnDirection;

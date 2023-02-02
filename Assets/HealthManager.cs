@@ -19,11 +19,15 @@ public class HealthManager : MonoBehaviour
         heartAnimator = GameObject.Find("Heart").GetComponent<Animator>();
     }
 
-    public void AddHealth(int amountToAdd) {
-        healthVal += amountToAdd;
+    public void SetHealth(int amount) {
+        healthVal = amount;
     }
 
-    public void reduceHealth(int amountToReduce) {
+    public int GetHealth() {
+        return healthVal;
+    }
+
+    public void ReduceHealth(int amountToReduce) {
         healthVal -= amountToReduce;
         heartAnimator.Play("ShakeHeart", 0, 0.4f);
     }
