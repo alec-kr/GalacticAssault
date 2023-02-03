@@ -7,6 +7,7 @@ public class PlayerShip : MonoBehaviour
 {
     [SerializeField] private ParticleSystem explosionPrefab;
     [SerializeField] private AudioSource hitEffect;
+    [SerializeField] private AudioSource powerUpSound;
     [SerializeField] private GameObject textPrefab;
     private HealthManager healthMgr;
 
@@ -48,7 +49,9 @@ public class PlayerShip : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.name.StartsWith("ExtraLife")) {
             Destroy(col.gameObject);
+            powerUpSound.Play();
             healthMgr.SetHealth(100);
+
         }
     }
 }
