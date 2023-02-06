@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    public ParticleSystem rocketThruster;
     private float thrustSpeed = 6.0f;
     private float turnSpeed = 15.0f;
     private Rigidbody2D _rigidbody;
     private bool _thrusting;
     private float _turnDirection;
+    private GameObject thruster;
     Vector3 currentPos;
 
     private void Awake() {
         _rigidbody = GetComponent<Rigidbody2D>();
+        thruster = gameObject.transform.Find("Thruster").gameObject;
     }
 
     private void Update() {
@@ -31,10 +32,11 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate() {
         if(_thrusting) {
             _rigidbody.AddForce(this.transform.up * this.thrustSpeed);
-            rocketThruster.Play();
+            thruster.SetActive(true);
         }
-        else
-            rocketThruster.Stop();
+        else {
+            thruster.SetActive(false);
+        }
 
         if(_turnDirection != 0.0f)
             _rigidbody.AddTorque(_turnDirection * this.turnSpeed);
