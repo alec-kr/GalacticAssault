@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class MenuButton : MonoBehaviour
 {
     private GameObject settingsPanel;
 
@@ -21,6 +21,6 @@ public class PlayButton : MonoBehaviour
     }
 
     public void hideSettings() {
-        settingsPanel.SetActive(false);
+        settingsPanel.GetComponent<Animator>().Play("SlideOut");
     }
 }

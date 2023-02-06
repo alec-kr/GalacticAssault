@@ -1041,7 +1041,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1031588180}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
         m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
@@ -1520,6 +1520,7 @@ GameObject:
   - component: {fileID: 1573055109}
   - component: {fileID: 1573055111}
   - component: {fileID: 1573055110}
+  - component: {fileID: 1573055112}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -1548,7 +1549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -71.419785}
+  m_AnchoredPosition: {x: 0, y: -528}
   m_SizeDelta: {x: 432.107, y: 384.075}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573055110
@@ -1589,6 +1590,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573055108}
   m_CullTransparentMesh: 1
+--- !u!95 &1573055112
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573055108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 883e3465b8fe72d83a6e3610b8a63b7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1586772684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,7 +1956,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1777423225}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
         m_MethodName: hideSettings
         m_Mode: 1
         m_Arguments:
