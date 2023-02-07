@@ -869,14 +869,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3773585, g: 0.32734713, b: 0, a: 1}
+  m_Color: {r: 0.6415094, g: 0.24464342, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 874b343cf51efe745b644be33893b09a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a9bb2005e4a28d3ba7e3aaa1e050fa6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1688,6 +1688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_text
       value: Exit
@@ -1805,6 +1809,10 @@ PrefabInstance:
     - target: {fileID: 8616077665030420923, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_Name
       value: SettingsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_text
@@ -2110,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 8616077665030420923, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_Name
       value: PlayButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_fontSize
