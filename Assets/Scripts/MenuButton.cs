@@ -7,9 +7,6 @@ public class MenuButton : MonoBehaviour
 {
     private GameObject settingsPanel;
 
-    private void Start() {
-        settingsPanel = GameObject.Find("Panel").transform.Find("SettingsPanel").gameObject;
-    }
     // public int gameScene;
     public void playGame() {
         // SceneManager.LoadScene(gameScene);
@@ -21,10 +18,12 @@ public class MenuButton : MonoBehaviour
     }
 
     public void showSettings() {
+        settingsPanel = GameObject.Find("Panel").transform.Find("SettingsPanel").gameObject;
         settingsPanel.SetActive(true);
     }
 
     public void hideSettings() {
+        settingsPanel = GameObject.Find("Panel").transform.Find("SettingsPanel").gameObject;
         settingsPanel.GetComponent<Animator>().Play("SlideOut");
     }
 }
