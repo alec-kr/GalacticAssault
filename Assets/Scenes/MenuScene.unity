@@ -1688,6 +1688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_text
       value: Exit
@@ -1805,6 +1809,10 @@ PrefabInstance:
     - target: {fileID: 8616077665030420923, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_Name
       value: SettingsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_text
@@ -2110,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 8616077665030420923, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_Name
       value: PlayButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616077666250685608, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 8616077666250685609, guid: f650ece37e47fc4978667b11578b7cb5, type: 3}
       propertyPath: m_fontSize
