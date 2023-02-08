@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuButton : MonoBehaviour
 {
     private GameObject settingsPanel;
+    private GameObject instructionsPanel;
 
     // public int gameScene;
     public void playGame() {
@@ -25,5 +26,15 @@ public class MenuButton : MonoBehaviour
     public void hideSettings() {
         settingsPanel = GameObject.Find("Panel").transform.Find("SettingsPanel").gameObject;
         settingsPanel.GetComponent<Animator>().Play("SlideOut");
+    }
+
+    public void showInstructions() {
+        instructionsPanel = GameObject.Find("Panel").transform.Find("InstructionsPanel").gameObject;
+        instructionsPanel.SetActive(true);
+    }
+
+    public void hideInstructions() {
+        instructionsPanel = GameObject.Find("Panel").transform.Find("InstructionsPanel").gameObject;
+        instructionsPanel.GetComponent<Animator>().Play("SlideRight");
     }
 }
