@@ -1185,6 +1185,11 @@ Transform:
   m_Father: {fileID: 1381216285}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1637903024 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6888736176612796389, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+  m_PrefabInstance: {fileID: 89900112348837792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657054204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1684,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101889133452506108, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: shoot
+      value: 
+      objectReference: {fileID: 8300000, guid: ba5b9da8b3b9af742abfa0fd399e1a0f, type: 3}
+    - target: {fileID: 101889133452506108, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 327746557737189943, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986752816842912812, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401794679344452678, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: shoot
+      value: 
+      objectReference: {fileID: 8300000, guid: ba5b9da8b3b9af742abfa0fd399e1a0f, type: 3}
+    - target: {fileID: 6401794679344452678, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: shootEffect
+      value: 
+      objectReference: {fileID: 1637903024}
+    - target: {fileID: 6888736176612796389, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8081163339118537544, guid: 11a69353aeac7c436b9df681cd0182e8, type: 3}
       propertyPath: m_Name
       value: PlayerShip
