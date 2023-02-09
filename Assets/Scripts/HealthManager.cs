@@ -21,6 +21,7 @@ public class HealthManager : MonoBehaviour
 
     public void SetHealth(int amount) {
         healthVal = amount;
+        heartAnimator.Play("HealthUpAnim", 0, 0.4f);
     }
 
     public int GetHealth() {
