@@ -11,13 +11,50 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] spawnPoints;
     // The player ship
     private GameObject player;
+    private float rate = 2.0f;
 
     // Update is called once per frame
     void Start()
     {
         // Find the player's ship
         player = GameObject.Find("PlayerShip");
-        InvokeRepeating("RandomSpawn", 2.0f, 5.0f);
+        InvokeRepeating("RandomSpawn", 2.0f, rate);
+    }
+
+    void FixedUpdate() {
+        // Get the current score
+        int score = GameObject.Find("GameHUD").GetComponent<ScoreManager>().GetScore();
+
+        // If the current spawn rate does not match the score, update the spawn rate
+        if (score < 50 && rate != 2.0f) {
+            CancelInvoke("RandomSpawn");
+            rate = 2.0f;
+            InvokeRepeating("RandomSpawn", 2.0f, rate);
+        }
+
+        else if (score >= 50 && score < 100 && rate != 1.8f) {
+            CancelInvoke("RandomSpawn");
+            rate = 1.8f;
+            InvokeRepeating("RandomSpawn", 2.0f, rate);
+        }
+
+        else if (score >= 100 && score < 200 && rate != 1.5f) {
+            CancelInvoke("RandomSpawn");
+            rate = 1.5f;
+            InvokeRepeating("RandomSpawn", 2.0f, rate);
+        }
+
+        else if (score >= 200 && score < 300 && rate != 1.2f) {
+            CancelInvoke("RandomSpawn");
+            rate = 1.2f;
+            InvokeRepeating("RandomSpawn", 2.0f, rate);
+        }
+
+        else if (score >= 300 && rate != 1.0f) {
+            CancelInvoke("RandomSpawn");
+            rate = 1.0f;
+            InvokeRepeating("RandomSpawn", 2.0f, rate);
+        }
     }
 
     // This function will randomly spawn an enemy at a spawn point

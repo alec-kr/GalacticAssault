@@ -18,6 +18,11 @@ public class ScoreManager : MonoBehaviour
         scoreVal += amountToAdd;
     }
 
+    // Returns the current score
+    public int GetScore() {
+        return scoreVal; 
+    }
+
     private void FixedUpdate() {
         scoreText.text = $"Score: {scoreVal}";
     }
