@@ -26,5 +26,9 @@ public class ScoreManager : MonoBehaviour
     // Update the score text with the current score value
     private void FixedUpdate() {
         scoreText.text = $"Score: {scoreVal}";
+
+        if (scoreVal > PlayerPrefs.GetInt("myScore")) {
+            PlayerPrefs.SetInt("myScore", scoreVal);
+        }
     }
 }
