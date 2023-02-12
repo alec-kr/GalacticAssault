@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     // Bullet speed
-    public float velocity = 20f;
+    private float velocity;
     private Rigidbody2D rb;
     // The animation that is played when the bullet hits the player
     public GameObject hitEffect;
@@ -14,6 +14,8 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set the velocity
+        velocity = 20f;
         // Get the RigidBody2D component of the bullet
         rb = GetComponent<Rigidbody2D>();
         // Set the velocity of the bullet

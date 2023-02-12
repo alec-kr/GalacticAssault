@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    public float velocity = 20f;
+    private float velocity;
     private Rigidbody2D rb;
     public GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
+        // Set the bullet velocity
+        velocity = 20f;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * velocity;
     }

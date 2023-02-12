@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
         scoreVal = 0;
         scoreText = GameObject.Find("Score").GetComponent<TMP_Text>();
     }
-
+    // Add a specific amount to the current score
     public void AddScore(int amountToAdd) {
         scoreVal += amountToAdd;
     }
@@ -23,6 +23,7 @@ public class ScoreManager : MonoBehaviour
         return scoreVal; 
     }
 
+    // Update the score text with the current score value
     private void FixedUpdate() {
         scoreText.text = $"Score: {scoreVal}";
     }
