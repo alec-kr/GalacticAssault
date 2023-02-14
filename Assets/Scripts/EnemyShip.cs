@@ -33,23 +33,29 @@ public class EnemyShip : MonoBehaviour
         }
     }
 
+    // Inflict damage on the enemy ship
     public void takeDamage() {
+        // Generate a random damage value from 1 to 10
         int randScore = Random.Range(1, 11);
 
         if (gameObject != null) {
+            // Set up the floating score text
             GameObject scoreParent = Instantiate(textPrefab, transform.position, Quaternion.identity);
             scoreParent.transform.GetChild(0).gameObject.GetComponent<TextMesh>().text = $"+{randScore}";
 
+            // If enemy has enough health
             if (health > randScore) {
+                // Play the hit sound effect, and reduce the health
                 hitEffect.Play();
                 health -= randScore;
             }
 
+            // Else, destroy the enemy ship
             else {
-                randScore = health;
                 death();
             }
 
+            // Update the player score
             scoreMgr.AddScore(randScore);
         }
     }

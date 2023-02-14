@@ -27,33 +27,43 @@ public class EnemySpawner : MonoBehaviour
 
         // If the current spawn rate does not match the score, update the spawn rate
         if (score < 50 && rate != 2.0f) {
+            // Cancel the current InvokeRepeating()
             CancelInvoke("RandomSpawn");
-            rate = 2.0f;
-            InvokeRepeating("RandomSpawn", 2.0f, rate);
+            rate = 2.0f; // Update the spawn rate
+            // Start a new InvokeRepeating with the new spawn rate
+            InvokeRepeating("RandomSpawn", 1.0f, rate);
         }
 
         else if (score >= 50 && score < 100 && rate != 1.8f) {
+            // Cancel the current InvokeRepeating()
             CancelInvoke("RandomSpawn");
-            rate = 1.8f;
-            InvokeRepeating("RandomSpawn", 2.0f, rate);
+            rate = 1.8f; // Update the spawn rate
+            // Start a new InvokeRepeating with the new spawn rate
+            InvokeRepeating("RandomSpawn", 1.0f, rate);
         }
 
         else if (score >= 100 && score < 200 && rate != 1.5f) {
+            // Cancel the current InvokeRepeating()
             CancelInvoke("RandomSpawn");
-            rate = 1.5f;
-            InvokeRepeating("RandomSpawn", 2.0f, rate);
+            rate = 1.5f; // Update the spawn rate
+            // Start a new InvokeRepeating with the new spawn rate
+            InvokeRepeating("RandomSpawn", 1.0f, rate);
         }
 
         else if (score >= 200 && score < 300 && rate != 1.2f) {
+            // Cancel the current InvokeRepeating()
             CancelInvoke("RandomSpawn");
-            rate = 1.2f;
-            InvokeRepeating("RandomSpawn", 2.0f, rate);
+            rate = 1.2f; // Update the spawn rate
+            // Start a new InvokeRepeating() with the new spawn rate
+            InvokeRepeating("RandomSpawn", 1.0f, rate);
         }
 
         else if (score >= 300 && rate != 1.0f) {
+            // Cancel the current InvokeRepeating()
             CancelInvoke("RandomSpawn");
-            rate = 1.0f;
-            InvokeRepeating("RandomSpawn", 2.0f, rate);
+            rate = 1.0f; // Update the spawn rate
+            // Start a new InvokeRepeating() with the new spawn rate
+            InvokeRepeating("RandomSpawn", 1.0f, rate);
         }
     }
 

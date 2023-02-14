@@ -8,9 +8,8 @@ public class MenuButton : MonoBehaviour
     private GameObject settingsPanel;
     private GameObject instructionsPanel;
 
-    // public int gameScene;
+    // Load the game scene
     public void playGame() {
-        // SceneManager.LoadScene(gameScene);
         SceneManager.LoadScene("GameScene");
     }
 
@@ -28,6 +27,7 @@ public class MenuButton : MonoBehaviour
         settingsPanel.GetComponent<Animator>().Play("SlideOut");
     }
 
+    // Activate the instruction panel
     public void showInstructions() {
         instructionsPanel = GameObject.Find("Panel").transform.Find("InstructionsPanel").gameObject;
         instructionsPanel.SetActive(true);
@@ -36,5 +36,9 @@ public class MenuButton : MonoBehaviour
     public void hideInstructions() {
         instructionsPanel = GameObject.Find("Panel").transform.Find("InstructionsPanel").gameObject;
         instructionsPanel.GetComponent<Animator>().Play("SlideRight");
+    }
+
+    public void exitGame() {
+        Application.Quit();
     }
 }
