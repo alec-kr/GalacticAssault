@@ -19,6 +19,7 @@ public class KeepFixed : MonoBehaviour
         if (player == null)
             return;
 
+        // Get the starting coordinates
         startX = this.transform.position.x;
         startY = this.transform.position.y;
         startLoc = player.transform.position;
@@ -33,6 +34,11 @@ public class KeepFixed : MonoBehaviour
 
         // Get the player's current location
         currLoc = player.transform.position;
-        this.transform.position = new Vector3(startX-(currLoc.x-startLoc.x), startY-(currLoc.y-startLoc.y));
+
+        // Update the position of the object, relative to the player location
+        this.transform.position = new Vector3(
+                                            startX-(currLoc.x-startLoc.x), 
+                                            startY-(currLoc.y-startLoc.y)
+                                );
     }
 }
