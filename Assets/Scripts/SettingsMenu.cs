@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+// This class is responsible for handling the 
+// audio sliders in the settings menu
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer musicMixer;
