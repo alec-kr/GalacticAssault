@@ -78,6 +78,9 @@ public class EnemySpawner : MonoBehaviour
         int randomEnemy = Random.Range(0, enemyPrefabs.Length);
 
         // Instantiate the randomly chosen enemy ship at the random spawn point
-        Instantiate(enemyPrefabs[randomEnemy], spawnPoints[randomSpawnPoint].transform.position, spawnPoints[randomSpawnPoint].transform.rotation);
+        Instantiate(enemyPrefabs[randomEnemy], 
+                    spawnPoints[randomSpawnPoint].transform.position,
+                    spawnPoints[randomSpawnPoint].transform.rotation
+        );
     }
 }
